@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Session;
 
 class LoginController extends Controller
 {
@@ -107,6 +108,7 @@ class LoginController extends Controller
     
         // Log out the user
         Auth::logout();
+        Session::flush();
     
         return redirect()->route('index')->with('a', 'Logged out successfully');
     }

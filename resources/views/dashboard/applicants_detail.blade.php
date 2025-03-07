@@ -153,7 +153,7 @@
                                                             <td>{{ $education->institute_name }}</td>
                                                             <td>{{ $education->year_of_passing }}</td>
                                                             <td>{{ $education->percentage }}%</td>
-                                                            <td style="text-align:;">
+                                                            <td style="text-align:center;">
                                                                 @php
                                                                 // Find matching document where education_serial == edu_serial
                                                                 $document = $documents->firstWhere('education_serial', $education->edu_serial);
